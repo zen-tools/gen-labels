@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export LC_ALL='C';
+
 REQUIRED_APPS=( convert )
 FONT_SIZE="16";
 IMAGE_SIZE="24x24";
