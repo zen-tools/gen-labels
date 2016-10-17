@@ -2,13 +2,15 @@
 
 export LC_ALL='C';
 
-REQUIRED_APPS=( convert )
+REQUIRED_APPS=( convert );
 FONT_SIZE="16";
 IMAGE_SIZE="24x24";
+BASE_DIR="$(dirname $(readlink -f $0))";
+
 declare -A FONTS_MAP=(
-    ['BOLD']="/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-B.ttf"
-    ['REGULAR']="/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf"
-)
+    ['BOLD']="$BASE_DIR/fonts/UbuntuMono-B.ttf"
+    ['REGULAR']="$BASE_DIR/fonts/UbuntuMono-R.ttf"
+);
 
 LAYOUTS=(
     "am" "bg" "by" "cz" "de" "ee" "es" "fr"
@@ -82,7 +84,7 @@ BG="#373737";
 FG="#FFFFFF";
 SG="#000000";
 TEXT_FORMAT=2; # 0 - us, 1 - US, 2 - Us
-OUT_DIR="$(dirname $(readlink -f $0))/images";
+OUT_DIR="$BASE_DIR/images";
 
 while true
 do
