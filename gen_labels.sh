@@ -13,10 +13,12 @@ declare -A FONTS_MAP=(
 );
 
 LAYOUTS=(
-    "am" "bg" "by" "cz" "de" "ee" "es" "fr"
-    "gb" "ge" "gr" "hr" "hu" "is" "it" "kz"
-    "lt" "lv" "no" "pl" "pt" "ro" "ru" "se"
-    "si" "sk" "sr" "ua" "us" "uz" "fi" "zz"
+    "us" "af" "al" "am" "at" "az" "by" "be" "bd" "in" "ba" "br" "bg" "ma" "cm"
+    "mm" "ca" "cd" "cn" "hr" "cz" "dk" "nl" "bt" "ee" "ir" "iq" "fo" "fi" "fr"
+    "gh" "gn" "ge" "de" "gr" "hu" "is" "il" "it" "jp" "kg" "kh" "kz" "la" "lt"
+    "lv" "me" "mk" "mt" "mn" "no" "pl" "pt" "ro" "ru" "rs" "si" "sk" "es" "se"
+    "ch" "sy" "tj" "lk" "th" "tr" "tw" "ua" "gb" "uz" "vn" "kr" "ie" "pk" "mv"
+    "za" "np" "ng" "et" "sn" "tm" "ml" "tz" "ke" "bw" "ph" "md"
 );
 
 function usage () {
