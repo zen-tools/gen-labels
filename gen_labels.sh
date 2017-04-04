@@ -28,7 +28,7 @@ function usage () {
         "--dir        - output directory" \
         "--bold       - use bold font" \
         "--format     - type of string formatting" \
-        "               0 - us, 1 - US, 2 - Us (Default)" \
+        "               0 - us (Default), 1 - US, 2 - Us" \
         "-h | --help  - show this help"
 }
 
@@ -83,7 +83,7 @@ eval set -- "$OPTS";
 BG="#373737";
 FG="#FFFFFF";
 SG="#000000";
-TEXT_FORMAT=2; # 0 - us, 1 - US, 2 - Us
+TEXT_FORMAT=0; # 0 - us, 1 - US, 2 - Us
 OUT_DIR="$BASE_DIR/images";
 
 while true
