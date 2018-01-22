@@ -50,7 +50,7 @@ function require () {
 }
 
 function is_hex_color () {
-    COLOR=$(echo "$1" | grep -P '(?i)#([a-z0-9]{3}|[a-z0-9]{6})$');
+    COLOR=$(echo "$1" | grep -P '(?i)#([a-z0-9]{3}|[a-z0-9]{6}|[a-z0-9]{8})$');
     test -n "$COLOR" || return 1;
     return 0;
 }
