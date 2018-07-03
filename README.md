@@ -1,7 +1,7 @@
 # gen-labels
 A shell script to gen text labels for gxkb
 
-![screenshot 1](http://storage5.static.itmages.ru/i/16/1012/h_1476301696_1383324_8e6615278a.png "gxkb layouts")
+![screenshot 1](https://raw.githubusercontent.com/zen-tools/gen-labels/master/default_labels.png "gxkb layouts")
 
 ```bash
 zen@desktop:~/gen-labels$ ./gen_labels.sh -h
