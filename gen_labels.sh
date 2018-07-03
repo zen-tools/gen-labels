@@ -18,7 +18,7 @@ LAYOUTS=(
     "gh" "gn" "ge" "de" "gr" "hu" "is" "il" "it" "jp" "kg" "kh" "kz" "la" "lt"
     "lv" "me" "mk" "mt" "mn" "no" "pl" "pt" "ro" "ru" "rs" "si" "sk" "es" "se"
     "ch" "sy" "tj" "lk" "th" "tr" "tw" "ua" "gb" "uz" "vn" "kr" "ie" "pk" "mv"
-    "za" "np" "ng" "et" "sn" "tm" "ml" "tz" "ke" "bw" "ph" "md"
+    "za" "np" "ng" "et" "sn" "tm" "ml" "tz" "ke" "bw" "ph" "md" "zz"
 );
 
 function usage () {
