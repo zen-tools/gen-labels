@@ -13,12 +13,22 @@ declare -A FONTS_MAP=(
 );
 
 LAYOUTS=(
-    "us" "af" "al" "am" "at" "az" "by" "be" "bd" "in" "ba" "br" "bg" "ma" "cm"
-    "mm" "ca" "cd" "cn" "hr" "cz" "dk" "nl" "bt" "ee" "ir" "iq" "fo" "fi" "fr"
-    "gh" "gn" "ge" "de" "gr" "hu" "is" "il" "it" "jp" "kg" "kh" "kz" "la" "lt"
-    "lv" "me" "mk" "mt" "mn" "no" "pl" "pt" "ro" "ru" "rs" "si" "sk" "es" "se"
-    "ch" "sy" "tj" "lk" "th" "tr" "tw" "ua" "gb" "uz" "vn" "kr" "ie" "pk" "mv"
-    "za" "np" "ng" "et" "sn" "tm" "ml" "tz" "ke" "bw" "ph" "md" "zz"
+    "ad" "ae" "af" "ag" "ai" "al" "am" "an" "ao" "aq" "ar" "as" "at" "au" "aw"
+    "ax" "az" "ba" "bb" "bd" "be" "bf" "bg" "bh" "bi" "bj" "bl" "bm" "bn" "bo"
+    "br" "bs" "bt" "bw" "bz" "ca" "cc" "cd" "cf" "cg" "ch" "ci" "ck" "cl" "cm"
+    "co" "cr" "ct" "cu" "cv" "cw" "cx" "cy" "cz" "de" "dj" "dk" "dm" "do" "dz"
+    "ec" "ee" "eg" "eh" "er" "es" "et" "eu" "fi" "fj" "fk" "fm" "fo" "fr" "ga"
+    "gb" "gd" "ge" "gg" "gh" "gi" "gl" "gm" "gn" "gq" "gr" "gs" "gt" "gu" "gw"
+    "gy" "hk" "hn" "hr" "ht" "hu" "ic" "id" "ie" "il" "im" "in" "iq" "is" "it"
+    "je" "jm" "jo" "jp" "ke" "kg" "kh" "ki" "km" "kn" "kp" "kr" "kw" "ky" "kz"
+    "la" "lb" "lc" "li" "lk" "lr" "ls" "lt" "lu" "lv" "ly" "ma" "mc" "md" "me"
+    "mf" "mg" "mh" "mk" "ml" "mm" "mn" "mo" "mp" "mq" "mr" "ms" "mt" "mu" "mv"
+    "mw" "mx" "my" "mz" "na" "nc" "ne" "nf" "ng" "ni" "nl" "no" "np" "nr" "nu"
+    "nz" "om" "pa" "pe" "pf" "pg" "ph" "pk" "pl" "pn" "pr" "ps" "pt" "pw" "py"
+    "qa" "re" "ro" "rs" "rw" "sa" "sb" "sc" "sd" "se" "sg" "sh" "si" "sk" "sl"
+    "sm" "sn" "so" "ss" "st" "sv" "sx" "sy" "sz" "tc" "td" "tf" "tg" "th" "tj"
+    "tk" "tl" "tm" "tn" "to" "tr" "tt" "tv" "tw" "tz" "ua" "ug" "us" "uy" "uz"
+    "va" "vc" "ve" "vg" "vi" "vn" "vu" "wf" "ws" "ye" "yt" "za" "zm" "zw" "zz"
 );
 
 function usage () {
@@ -30,7 +40,7 @@ function usage () {
         "--dir        - output directory" \
         "--bold       - use bold font" \
         "--format     - type of string formatting" \
-        "               0 - us (Default), 1 - US, 2 - Us" \
+        "               0 - ua (Default), 1 - UA, 2 - Ua" \
         "-h | --help  - show this help"
 }
 
@@ -85,7 +95,7 @@ eval set -- "$OPTS";
 BG="#373737";
 FG="#FFFFFF";
 SG="#000000";
-TEXT_FORMAT=0; # 0 - us, 1 - US, 2 - Us
+TEXT_FORMAT=0; # 0 - ua, 1 - UA, 2 - Ua
 OUT_DIR="$BASE_DIR/images";
 
 while true
@@ -154,8 +164,8 @@ do
     convert -size "$IMAGE_SIZE" xc:"$BG" \
         -font "$FONT" -antialias \
         -pointsize "$FONT_SIZE" -gravity center \
-        -fill "$SG" -draw "text 2,1 ${TEXT}" \
-        -fill "$FG" -draw "text 1,0 ${TEXT}" \
+        -fill "$SG" -draw "text 1,1 ${TEXT}" \
+        -fill "$FG" -draw "text 0,0 ${TEXT}" \
         "$OUT_DIR/$i.png";
     echo "* Generating '$OUT_DIR/$i.png'";
 done
